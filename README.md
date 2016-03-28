@@ -7,7 +7,7 @@ on the different file of the current directory in a shuffle order.
 
 ## Installation
 * clone this git directory on your Raspberry Pi
-* on your local directory as root execute the following command
+* on your local directory execute the following command
 
 `sudo python setup.py install`
 
