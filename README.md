@@ -1,4 +1,4 @@
-# Omcplayshuffle
+# Omxplayshuffle
 
 ## Presentation
 
