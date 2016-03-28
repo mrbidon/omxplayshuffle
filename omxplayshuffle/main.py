@@ -13,7 +13,7 @@ def run_bash(cmd_, cwd=".", out_err=False):
     if out_err:
         return stdout, stderr
     else:
-        return stdout
+        return stdout, ""
 
 #return the list of file in a specified path
 def get_files_list(path):
