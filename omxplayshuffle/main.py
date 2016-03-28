@@ -28,7 +28,7 @@ def main():
     files = get_files_list(os.getcwd())
     random.shuffle(files)
     for file in files:
-        out, err = run_bash("omxplayer -b {0}".format(file))
+        out, err = run_bash('omxplayer -b "{0}"'.format(file))
         print out
         print err
 
