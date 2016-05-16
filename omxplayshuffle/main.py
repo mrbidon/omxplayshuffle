@@ -9,7 +9,7 @@ def run_bash(cmd_, cwd=".", out_err=False):
     p = subprocess.Popen(cmd_, shell=True, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = p.communicate()
     if stderr != "":
-        print stderr
+        print(stderr)
     if out_err:
         return stdout, stderr
     else:
@@ -17,11 +17,8 @@ def run_bash(cmd_, cwd=".", out_err=False):
 
 #return the list of file in a specified path
 def get_files_list(path):
-    files = []
-    for file in next(os.walk(path))[2]:
-        files.append(file)
-    logging.debug(files)
-    return files
+    files = list(os.walk(path))
+    return files[0][2]
 
 def main():
     print os.getcwd()
@@ -29,8 +26,8 @@ def main():
     random.shuffle(files)
     for file in files:
         out, err = run_bash('omxplayer -b "{0}"'.format(file))
-        print out
-        print err
+        print(out)
+        print(err)
 
 
 if __name__ == '__main__':
